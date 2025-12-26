@@ -140,6 +140,44 @@ const videos = [
 - Font Family: Inter, system fonts
 - Responsive font sizes using `clamp()`
 
+## 🌐 Deploying to GitHub Pages
+
+This project is configured for automatic deployment to GitHub Pages using GitHub Actions.
+
+### Automatic Deployment (Recommended)
+
+1. **Enable GitHub Pages in your repository:**
+   - Go to your repository Settings → Pages
+   - Under "Source", select "GitHub Actions"
+
+2. **Push to main branch:**
+   - The workflow will automatically build and deploy on every push to `main`
+   - You can also manually trigger it from the Actions tab
+
+3. **Update repository name (if needed):**
+   - If your repository name is NOT "Portfolio", update `vite.config.ts`:
+   ```typescript
+   base: process.env.GITHUB_PAGES === 'true' ? '/YourRepoName/' : '/',
+   ```
+
+### Manual Deployment
+
+If you prefer to deploy manually:
+
+```bash
+# Build for GitHub Pages
+npm run build:gh-pages
+
+# The dist folder will contain the built files
+# Push the dist folder to the gh-pages branch
+```
+
+### Important Notes
+
+- The `.nojekyll` file is included to ensure GitHub Pages serves all files correctly
+- The base path is set to `/Portfolio/` for project pages
+- If deploying to `username.github.io`, change the base path to `/` in `vite.config.ts`
+
 ## 📄 License
 
 This project is private and proprietary.

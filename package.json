@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "build:gh-pages": "GITHUB_PAGES=true tsc && vite build",
+    "preview": "vite preview",
+    "deploy": "npm run build:gh-pages"
   },
   "dependencies": {
     "react": "^18.2.0",
