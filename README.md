@@ -153,12 +153,7 @@ This project is configured for automatic deployment to GitHub Pages using GitHub
 2. **Push to main branch:**
    - The workflow will automatically build and deploy on every push to `main`
    - You can also manually trigger it from the Actions tab
-
-3. **Update repository name (if needed):**
-   - If your repository name is NOT "Portfolio", update `vite.config.ts`:
-   ```typescript
-   base: process.env.GITHUB_PAGES === 'true' ? '/YourRepoName/' : '/',
-   ```
+   - Your site will be live at: `https://SaiyamJn.github.io/Portfolio_Design/`
 
 ### Manual Deployment
 
@@ -175,8 +170,8 @@ npm run build:gh-pages
 ### Important Notes
 
 - The `.nojekyll` file is included to ensure GitHub Pages serves all files correctly
-- The base path is set to `/Portfolio/` for project pages
-- If deploying to `username.github.io`, change the base path to `/` in `vite.config.ts`
+- The base path is set to `/Portfolio_Design/` to match your repository name
+- Your live site URL: `https://SaiyamJn.github.io/Portfolio_Design/`
 
 ## 📄 License
 
