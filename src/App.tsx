@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from 'react'
 import Landing from './components/Landing'
 import ImageGallery from './components/ImageGallery'
 import VideoGallery from './components/VideoGallery'
-import { getVideoPath } from './config/videos'
 
 // Helper to get asset path with base URL
 const getAssetPath = (path: string) => {
@@ -160,8 +159,18 @@ const App: React.FC = () => {
     getAssetPath('Assets/Posters/Western_group_dance.png'),
   ]
 
-  // Videos - use external URLs if configured, otherwise fall back to local paths
-  const videos = Array.from({ length: 10 }, (_, i) => getVideoPath(i))
+  const videos = [
+    getAssetPath('Assets/Videos/1.mp4'),
+    getAssetPath('Assets/Videos/2.mp4'),
+    getAssetPath('Assets/Videos/3.mp4'),
+    getAssetPath('Assets/Videos/4.mp4'),
+    getAssetPath('Assets/Videos/5.mp4'),
+    getAssetPath('Assets/Videos/6.mp4'),
+    getAssetPath('Assets/Videos/7.mp4'),
+    getAssetPath('Assets/Videos/8.mp4'),
+    getAssetPath('Assets/Videos/9.mp4'),
+    getAssetPath('Assets/Videos/10.mp4'),
+  ]
 
   if (showLanding) {
     return (

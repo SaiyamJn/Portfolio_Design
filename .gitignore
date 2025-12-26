@@ -4,7 +4,5 @@ dist
 *.log
 .vite
 
-# Large video files are now tracked with Git LFS
-# Assets/Videos/*.mp4
-# public/Assets/Videos/*.mp4
+# Videos are now committed directly (compressed)
 
