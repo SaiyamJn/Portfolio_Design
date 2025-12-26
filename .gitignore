@@ -4,7 +4,7 @@ dist
 *.log
 .vite
 
-# Large video files - use Git LFS or host externally
-Assets/Videos/*.mp4
-public/Assets/Videos/*.mp4
+# Large video files are now tracked with Git LFS
+# Assets/Videos/*.mp4
+# public/Assets/Videos/*.mp4
 
