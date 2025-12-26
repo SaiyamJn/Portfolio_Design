@@ -173,28 +173,9 @@ npm run build:gh-pages
 - The base path is set to `/Portfolio_Design/` to match your repository name
 - Your live site URL: `https://SaiyamJn.github.io/Portfolio_Design/`
 
-### Video Hosting
+### Video Files
 
-**Important**: GitHub Pages cannot serve Git LFS files. Videos must be hosted externally.
-
-To make videos work on your live site:
-
-1. **Upload videos to a hosting service:**
-   - [Cloudinary](https://cloudinary.com) (Free: 25GB storage, 25GB bandwidth)
-   - [Vimeo](https://vimeo.com) (Free tier available)
-   - [YouTube](https://youtube.com) (Upload as unlisted)
-   - AWS S3 or similar CDN
-
-2. **Update video URLs in `src/config/videos.ts`:**
-   ```typescript
-   export const videoUrls: string[] = [
-     'https://res.cloudinary.com/your-cloud/video/upload/v1/1.mp4',
-     'https://res.cloudinary.com/your-cloud/video/upload/v1/2.mp4',
-     // ... add all video URLs
-   ]
-   ```
-
-3. **Commit and push** - Videos will now load from external URLs
+Videos are stored directly in the repository (compressed to be under GitHub's 100MB limit). They are served from the `public/Assets/Videos/` folder and will work on GitHub Pages.
 
 ## 📄 License
 
