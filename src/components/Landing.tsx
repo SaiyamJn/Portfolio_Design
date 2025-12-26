@@ -7,16 +7,21 @@ interface LandingProps {
   videos: string[]
 }
 
+// Helper to get asset path with base URL
+const getAssetPath = (path: string) => {
+  return `${import.meta.env.BASE_URL}${path}`
+}
+
 // Software icons/logos from Assets/Icons folder
 const SoftwareIcon: React.FC<{ name: string }> = ({ name }) => {
   const iconMap: { [key: string]: string } = {
-    'Adobe Photoshop': 'Assets/Icons/photoshop.png',
-    'Adobe Lightroom': 'Assets/Icons/photoshop-lightroom.png',
-    'Adobe After Effects': 'Assets/Icons/after-effects.png',
-    'Adobe Premiere Pro': 'Assets/Icons/premiere-pro.png',
-    'Adobe Illustrator': 'Assets/Icons/illustrator.png',
-    'Canva': 'Assets/Icons/canva.png',
-    'Figma': 'Assets/Icons/figma.png',
+    'Adobe Photoshop': getAssetPath('Assets/Icons/photoshop.png'),
+    'Adobe Lightroom': getAssetPath('Assets/Icons/photoshop-lightroom.png'),
+    'Adobe After Effects': getAssetPath('Assets/Icons/after-effects.png'),
+    'Adobe Premiere Pro': getAssetPath('Assets/Icons/premiere-pro.png'),
+    'Adobe Illustrator': getAssetPath('Assets/Icons/illustrator.png'),
+    'Canva': getAssetPath('Assets/Icons/canva.png'),
+    'Figma': getAssetPath('Assets/Icons/figma.png'),
   }
 
   const iconPath = iconMap[name] || ''
@@ -677,7 +682,7 @@ const Landing: React.FC<LandingProps> = ({ onEnterPortfolio, posterImages, gamin
           }}
         >
           <img
-            src="Assets/Icons/mail.png"
+            src={getAssetPath('Assets/Icons/mail.png')}
             alt="Email"
             style={{
               width: '16px',
@@ -710,7 +715,7 @@ const Landing: React.FC<LandingProps> = ({ onEnterPortfolio, posterImages, gamin
           }}
         >
           <img
-            src="Assets/Icons/discord.png"
+            src={getAssetPath('Assets/Icons/discord.png')}
             alt="Discord"
             style={{
               width: '16px',
@@ -733,7 +738,7 @@ const Landing: React.FC<LandingProps> = ({ onEnterPortfolio, posterImages, gamin
           }}
         >
           <img
-            src="Assets/Icons/Location.png"
+            src={getAssetPath('Assets/Icons/Location.png')}
             alt="Location"
             style={{
               width: '16px',

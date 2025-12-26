@@ -6,4 +6,5 @@ dist
 
 # Large video files - use Git LFS or host externally
 Assets/Videos/*.mp4
+public/Assets/Videos/*.mp4
 

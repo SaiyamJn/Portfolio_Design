@@ -3,6 +3,11 @@ import Landing from './components/Landing'
 import ImageGallery from './components/ImageGallery'
 import VideoGallery from './components/VideoGallery'
 
+// Helper to get asset path with base URL
+const getAssetPath = (path: string) => {
+  return `${import.meta.env.BASE_URL}${path}`
+}
+
 const App: React.FC = () => {
   const [showLanding, setShowLanding] = useState(true)
   const [activeSection, setActiveSection] = useState<'gaming' | 'posters' | 'videos'>('gaming')
@@ -133,38 +138,38 @@ const App: React.FC = () => {
 
   // Image arrays - single source of truth
   const gamingImages = [
-    'Assets/Gaming/1.png',
-    'Assets/Gaming/CWL Base DesignNov_25 (1).png',
-    'Assets/Gaming/CWL BAse Pack (1).png',
-    'Assets/Gaming/LL Sub_Dec25.png',
-    'Assets/Gaming/October 25 LL Sub.png',
-    'Assets/Gaming/priceless.png',
-    'Assets/Gaming/QL Sale Poster.png',
-    'Assets/Gaming/Samantha Intro Design.png',
+    getAssetPath('Assets/Gaming/1.png'),
+    getAssetPath('Assets/Gaming/CWL Base DesignNov_25 (1).png'),
+    getAssetPath('Assets/Gaming/CWL BAse Pack (1).png'),
+    getAssetPath('Assets/Gaming/LL Sub_Dec25.png'),
+    getAssetPath('Assets/Gaming/October 25 LL Sub.png'),
+    getAssetPath('Assets/Gaming/priceless.png'),
+    getAssetPath('Assets/Gaming/QL Sale Poster.png'),
+    getAssetPath('Assets/Gaming/Samantha Intro Design.png'),
   ]
 
   const posterImages = [
-    'Assets/Posters/Canva Challenge.png',
-    'Assets/Posters/Photography.png',
-    'Assets/Posters/Pixel Premiere.png',
-    'Assets/Posters/Quiz.png',
-    'Assets/Posters/Taal.png',
-    'Assets/Posters/Vogue Vista_1.png',
-    'Assets/Posters/Vogue Vista.png',
-    'Assets/Posters/Western_group_dance.png',
+    getAssetPath('Assets/Posters/Canva Challenge.png'),
+    getAssetPath('Assets/Posters/Photography.png'),
+    getAssetPath('Assets/Posters/Pixel Premiere.png'),
+    getAssetPath('Assets/Posters/Quiz.png'),
+    getAssetPath('Assets/Posters/Taal.png'),
+    getAssetPath('Assets/Posters/Vogue Vista_1.png'),
+    getAssetPath('Assets/Posters/Vogue Vista.png'),
+    getAssetPath('Assets/Posters/Western_group_dance.png'),
   ]
 
   const videos = [
-    'Assets/Videos/1.mp4',
-    'Assets/Videos/2.mp4',
-    'Assets/Videos/3.mp4',
-    'Assets/Videos/4.mp4',
-    'Assets/Videos/5.mp4',
-    'Assets/Videos/6.mp4',
-    'Assets/Videos/7.mp4',
-    'Assets/Videos/8.mp4',
-    'Assets/Videos/9.mp4',
-    'Assets/Videos/10.mp4',
+    getAssetPath('Assets/Videos/1.mp4'),
+    getAssetPath('Assets/Videos/2.mp4'),
+    getAssetPath('Assets/Videos/3.mp4'),
+    getAssetPath('Assets/Videos/4.mp4'),
+    getAssetPath('Assets/Videos/5.mp4'),
+    getAssetPath('Assets/Videos/6.mp4'),
+    getAssetPath('Assets/Videos/7.mp4'),
+    getAssetPath('Assets/Videos/8.mp4'),
+    getAssetPath('Assets/Videos/9.mp4'),
+    getAssetPath('Assets/Videos/10.mp4'),
   ]
 
   if (showLanding) {
