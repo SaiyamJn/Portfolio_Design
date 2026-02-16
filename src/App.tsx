@@ -10,7 +10,7 @@ const getAssetPath = (path: string) => {
 
 const App: React.FC = () => {
   const [showLanding, setShowLanding] = useState(true)
-  const [activeSection, setActiveSection] = useState<'gaming' | 'posters' | 'videos'>('gaming')
+  const [activeSection, setActiveSection] = useState<'gaming' | 'posters' | 'videos'>('posters')
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
 
@@ -170,6 +170,8 @@ const App: React.FC = () => {
     getAssetPath('Assets/Videos/8.mp4'),
     getAssetPath('Assets/Videos/9.mp4'),
     getAssetPath('Assets/Videos/10.mp4'),
+    getAssetPath('Assets/Videos/11.mp4'),
+    getAssetPath('Assets/Videos/12.mp4')
   ]
 
   if (showLanding) {
@@ -296,7 +298,7 @@ const App: React.FC = () => {
             gap: '0.5rem',
             flexWrap: 'wrap',
           }}>
-            {(['gaming', 'posters', 'videos'] as const).map((section) => (
+            {(['videos', 'posters', 'gaming'] as const).map((section) => (
               <button
                 key={section}
                 className="portfolio-nav-button"
