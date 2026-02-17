@@ -10,7 +10,7 @@ const getAssetPath = (path: string) => {
 
 const App: React.FC = () => {
   const [showLanding, setShowLanding] = useState(true)
-  const [activeSection, setActiveSection] = useState<'gaming' | 'posters' | 'videos'>('posters')
+  const [activeSection, setActiveSection] = useState<'posters' | 'videos' | 'gaming'>('posters')
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
 
@@ -298,7 +298,7 @@ const App: React.FC = () => {
             gap: '0.5rem',
             flexWrap: 'wrap',
           }}>
-            {(['videos', 'posters', 'gaming'] as const).map((section) => (
+            {(['posters', 'videos', 'gaming'] as const).map((section) => (
               <button
                 key={section}
                 className="portfolio-nav-button"
