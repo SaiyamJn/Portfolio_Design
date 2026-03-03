@@ -149,6 +149,8 @@ const App: React.FC = () => {
   ]
 
   const posterImages = [
+    getAssetPath('Assets/Posters/Ardent.png'),
+    getAssetPath('Assets/Posters/Athlyst.png'),
     getAssetPath('Assets/Posters/Canva Challenge.png'),
     getAssetPath('Assets/Posters/Photography.png'),
     getAssetPath('Assets/Posters/Pixel Premiere.png'),
@@ -156,7 +158,7 @@ const App: React.FC = () => {
     getAssetPath('Assets/Posters/Taal.png'),
     getAssetPath('Assets/Posters/Vogue Vista_1.png'),
     getAssetPath('Assets/Posters/Vogue Vista.png'),
-    getAssetPath('Assets/Posters/Western_group_dance.png'),
+    getAssetPath('Assets/Posters/Western_group_dance.png')
   ]
 
   const videos = [
